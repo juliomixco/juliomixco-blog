@@ -6,14 +6,14 @@
   "author": "Julio Mixco <julio.mixg@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prebuild": "gatsby clean",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "keywords": [
     "gatsby"
@@ -33,6 +33,7 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "prettier": "2.0.4"
   },
   "repository": {

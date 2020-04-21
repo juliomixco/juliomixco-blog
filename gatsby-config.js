@@ -1,4 +1,6 @@
 module.exports = {
+  // repor name for github pages or when site is not published at a root domain
+  // pathPrefix: "/juliomixco-blog",
   siteMetadata: {
     title: `Julio Mixco`,
     description: `Software Engineering Professional with 5+ years of experience in web development. Understands development
