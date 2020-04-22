@@ -3,32 +3,47 @@
 //  *
 //  * See: https://www.gatsbyjs.org/docs/node-apis/
 //  */
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// const path = require("path")
-// const fs = require("fs")
-// const buildFolder = "docs"
-// // exports.onPreInit = () => {
-// //   if (process.argv[2] === buildFolder) {
-// //     fs.rmdirSync(path.join(__dirname, buildFolder), { recursive: true })
-// //     if (fs.existsSync(path.join(__dirname, "public"))) {
-// //       fs.renameSync(
-// //         path.join(__dirname, "public"),
-// //         path.join(__dirname, "public_dev")
-// //       )
-// //     }
-// //   }
-// // }
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    // add slug field to md nodes
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
 
-// exports.onPostBuild = () => {
-//   fs.rmdirSync(path.join(__dirname, buildFolder), { recursive: true })
-//   fs.renameSync(
-//     path.join(__dirname, "public"),
-//     path.join(__dirname, buildFolder)
-//   )
-//   //   if (fs.existsSync(path.join(__dirname, "public_dev"))) {
-//   //     fs.renameSync(
-//   //       path.join(__dirname, "public_dev"),
-//   //       path.join(__dirname, "public")
-//   //     )
-//   //   }
-// }
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/blog-post.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.fields.slug,
+      },
+    })
+  })
+}
