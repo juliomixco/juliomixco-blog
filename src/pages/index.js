@@ -22,9 +22,28 @@ const IndexPage = () => (
 
 const BlogIndex = ({ data }) => {
   console.log(data)
+  // const imageData = useStaticQuery(graphql`
+  //   query {
+  //     seoImage: file(relativePath: { eq: "images/profile.webp" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  const thumbnail = data.seoImage
+  console.log(data, thumbnail)
+  const imageSrc = thumbnail && thumbnail.childImageSharp.fluid.src
+  let origin = ""
+  if (typeof window !== "undefined") {
+    origin = window.location.origin
+  }
+  const image = origin + imageSrc
   return (
     <BlogLayout>
-      <SEO title="Index" />
+      <SEO title="Index" thumbnail={image} />
       <div>
         <h1
           css={css`
@@ -82,6 +101,13 @@ export const query = graphql`
             slug
           }
           excerpt
+        }
+      }
+    }
+    seoImage: file(relativePath: { eq: "images/profile.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

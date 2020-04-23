@@ -2,9 +2,26 @@ module.exports = {
   // repor name for github pages or when site is not published at a root domain
   // pathPrefix: "/juliomixco-blog",
   siteMetadata: {
-    title: `Julio Mixco - Blog | WIP`,
+    title: `Julio Mixco - Blog | WIP 🚧🏗🦺🛠`,
     description: `🎉 Welcome to my Blog 👋.  My name is Julio Mixco I'm a Software Engineering Professional with 5+ years of experience in web development I have worked as both backend and frontend developer with technologies like TypeScript, Javascript, C#, Angular, React, NodeJS and .Net `,
     author: `@JULIOMIXCO`,
+    twitterTag: "@JMixcoG",
+    twitterImage: "@JMixcoG",
+    keywords: [
+      "julio mixco",
+      "juliomixco",
+      "jmixco",
+      "jmixcog",
+      "developer",
+      "angular",
+      "typescript",
+      "julio mixco developer",
+      "fontend developer",
+      "julio mixco angular",
+      "julio mixco typescript",
+      "julio mixco frontend",
+      "fullstack",
+    ],
   },
   plugins: [
     `gatsby-plugin-emotion`,
