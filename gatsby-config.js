@@ -25,7 +25,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-emotion`,
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
@@ -67,6 +66,21 @@ module.exports = {
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {},
+          },
+          // {
+          //   resolve: `gatsby-remark-prismjs`,
+          //   options: {},
+          // },
+        ],
       },
     },
   ],

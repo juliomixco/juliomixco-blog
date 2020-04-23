@@ -1,8 +1,9 @@
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/blog-layout"
 import SEO from "../components/seo"
-
+deckDeckGoHighlightElement()
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
