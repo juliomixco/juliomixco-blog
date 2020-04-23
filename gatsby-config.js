@@ -2,10 +2,8 @@ module.exports = {
   // repor name for github pages or when site is not published at a root domain
   // pathPrefix: "/juliomixco-blog",
   siteMetadata: {
-    title: `Pandas Eating Lots`,
-    description: `Software Engineering Professional with 5+ years of experience in web development. Understands development
-    cycles using Agile methodologies. Experience with REST APIs development with both ASP.NET and Node.js, and
-    front-end development with React and Angular.`,
+    title: `Julio Mixco - Blog | WIP`,
+    description: `🎉 Welcome to my Blog 👋.  My name is Julio Mixco I'm a Software Engineering Professional with 5+ years of experience in web development I have worked as both backend and frontend developer with technologies like TypeScript, Javascript, C#, Angular, React, NodeJS and .Net `,
     author: `@JULIOMIXCO`,
   },
   plugins: [
@@ -22,18 +20,18 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `gatsby-starter-default`,
+    //     short_name: `starter`,
+    //     start_url: `/`,
+    //     background_color: `#663399`,
+    //     theme_color: `#663399`,
+    //     display: `minimal-ui`,
+    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -43,8 +41,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Julio Mixco - Blog`,
+        short_name: `JMixco - Blog`,
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,

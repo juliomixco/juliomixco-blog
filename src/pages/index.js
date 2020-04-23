@@ -24,6 +24,7 @@ const BlogIndex = ({ data }) => {
   console.log(data)
   return (
     <BlogLayout>
+      <SEO title="Index" />
       <div>
         <h1
           css={css`
@@ -31,7 +32,7 @@ const BlogIndex = ({ data }) => {
             border-bottom: 1px solid;
           `}
         >
-          Amazing Pandas Eating Things
+          Welcome to my Blog
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
