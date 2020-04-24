@@ -17,7 +17,7 @@ $color3: rgba(65, 60, 88, 1);
 $color4: rgba(255, 238, 207, 1);
 $color5: rgba(201, 166, 144, 1);
 $colorHeader: #252a2f;
-$backgroundColor: #9394b1;
+$backgroundColor: #d4d4d6;
 // /* HEX */
 // $color1: #084b83ff;
 // $color2: #47a8bdff;
@@ -125,6 +125,7 @@ h3 {
   border: 1px solid #b7b1b1;
   margin: 0 auto;
   max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.55) 0 8px 16px;
   @media (min-width: 600px) {
     max-width: 900px;
   }
