@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      background: `rebeccapurple`,
+      background: `var(--header-color)`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -35,7 +35,15 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-    <ul style={{ listStyle: `none`, display: "flex", margin: 0 }}>
+    <ul
+      className="header-nav"
+      style={{
+        listStyle: `none`,
+        display: "flex",
+        flexWrap: "wrap",
+        margin: 0,
+      }}
+    >
       <ListLink to="/">Home</ListLink>
       <ListLink to="/about/">About</ListLink>
       <ListLink to="/contact/">Contact</ListLink>
