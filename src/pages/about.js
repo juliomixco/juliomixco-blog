@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/blog-layout"
+import SkillGrid from "../components/skill-grid"
 
 export default ({ data }) => (
   <Layout>
@@ -25,6 +26,8 @@ export default ({ data }) => (
         contact@juliomixco.com
       </a>
     </p>
+    <h3>My Skills</h3>
+    <SkillGrid></SkillGrid>
   </Layout>
 )
 

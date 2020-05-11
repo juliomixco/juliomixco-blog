@@ -1,0 +1,57 @@
+[
+  {
+    "logoUrl": "../images/skills/csharp-logo.png",
+    "name": "C#",
+    "classes": ["skill-bg-hover-purple"]
+  },
+  {
+    "logoUrl": "../images/skills/typescript-logo.png",
+    "name": "TypeScript",
+    "classes": ["skill-bg-hover-lightblue"]
+  },
+  {
+    "logoUrl": "../images/skills/javascript-logo.png",
+    "name": "JavaScript",
+    "classes": ["skill-bg-hover-white"]
+  },
+  {
+    "logoUrl": "../images/skills/angular-logo.png",
+    "name": "Angular",
+    "classes": ["skill-bg-hover-redish"]
+  },
+  {
+    "logoUrl": "../images/skills/react-logo.png",
+    "name": "React",
+    "classes": ["skill-bg-hover-darkblue"]
+  },
+
+  {
+    "logoUrl": "../images/skills/node-logo.png",
+    "name": "NodeJS",
+    "classes": ["skill-bg-hover-green"]
+  },
+  {
+    "logoUrl": "../images/skills/rxjs-logo.png",
+    "name": "RxJS",
+    "classes": ["skill-bg-hover-purple"]
+  },
+  {
+    "logoUrl": "../images/skills/redux-logo.png",
+    "name": "Redux",
+    "classes": ["skill-bg-hover-purple"]
+  },
+  {
+    "logoUrl": "../images/skills/ngrx-logo.png",
+    "name": "NgRx",
+    "classes": ["skill-bg-hover-purple"]
+  },
+  {
+    "logoUrl": "../images/skills/mysql-logo.png",
+    "name": "MySQL"
+  },
+  {
+    "logoUrl": "../images/skills/sqlserver-logo.png",
+    "name": "SQL Server",
+    "classes": ["skill-bg-hover-white"]
+  }
+]
