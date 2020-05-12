@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://juliomixco.com/sitemap.xml
+Host: https://juliomixco.com
