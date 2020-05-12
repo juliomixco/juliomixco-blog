@@ -6,7 +6,13 @@ const SkillSquare = ({ logoUrl, name, containerClasses }) => {
   const extraClasses = containerClasses || []
   return (
     <div className={["skill-item", ...extraClasses].join(" ")}>
-      <Img fluid={logoUrl} />
+      <Img
+        className="skill-image"
+        objectFit="contain"
+        objectPosition="50% 50%"
+        fluid={logoUrl}
+        imgStyle={{ objectFit: "contain" }}
+      />
       <div className="skill-name">{name}</div>
     </div>
   )

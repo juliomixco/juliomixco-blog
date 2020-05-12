@@ -53,5 +53,15 @@
     "logoUrl": "../images/skills/sqlserver-logo.png",
     "name": "SQL Server",
     "classes": ["skill-bg-hover-white"]
+  },
+  {
+    "logoUrl": "../images/skills/sass-logo.png",
+    "name": "Sass",
+    "classes": ["skill-bg-hover-purple"]
+  },
+  {
+    "logoUrl": "../images/skills/d3-logo.png",
+    "name": "D3",
+    "classes": ["skill-bg-hover-white"]
   }
 ]

@@ -39,9 +39,17 @@ $lightblue-text: #2c375ff5;
       color: var(--text-color, $default-text-color);
     }
   }
-  .skill-name {
-    animation: 1.5s pulse-text 2s 3;
-  }
+}
+
+.skill-name {
+  animation: 1.5s pulse-text 2s 3;
+}
+.skill-image {
+  min-height: 215px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill-bg-hover-redish {

@@ -15,9 +15,8 @@ export default ({ data }) => (
         👋
       </span>
       . My name is Julio Mixco I'm a Software Engineering Professional with 5+
-      years of experience in web development I have worked as both backend and
-      frontend developer with technologies like TypeScript, Javascript, C#,
-      Angular, React, NodeJS and .Net.
+      years of experience in web development I have experience as both backend
+      and frontend developer.
     </p>
     <p>I hope you enjoy this content 🎈</p>
 
@@ -26,7 +25,7 @@ export default ({ data }) => (
         contact@juliomixco.com
       </a>
     </p>
-    <h2 class="margin-y-32">My Skills</h2>
+    <h2 className="margin-y-32">Technologies I've worked with</h2>
     <SkillGrid></SkillGrid>
   </Layout>
 )
