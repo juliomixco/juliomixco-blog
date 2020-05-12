@@ -2,6 +2,7 @@ module.exports = {
   // repor name for github pages or when site is not published at a root domain
   // pathPrefix: "/juliomixco-blog",
   siteMetadata: {
+    siteUrl: "https://juliomixco.com",
     title: `Julio Mixco - Blog | WIP 🚧🏗🦺🛠`,
     description: `🎉 Welcome to my Blog 👋.  My name is Julio Mixco I'm a Software Engineering Professional with 5+ years of experience in web development I have worked as both backend and frontend developer with technologies like TypeScript, Javascript, C#, Angular, React, NodeJS and .Net `,
     author: `@JULIOMIXCO`,
@@ -31,6 +32,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -38,18 +40,6 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -60,7 +50,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Julio Mixco - Blog`,
-        short_name: `JMixco - Blog`,
+        short_name: `Julio Mixco`,
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
@@ -78,11 +68,14 @@ module.exports = {
             resolve: `gatsby-remark-highlight-code`,
             options: {},
           },
-          // {
-          //   resolve: `gatsby-remark-prismjs`,
-          //   options: {},
-          // },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://juliomixco.com",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],

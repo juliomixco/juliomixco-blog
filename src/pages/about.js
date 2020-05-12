@@ -5,7 +5,7 @@ import SkillGrid from "../components/skill-grid"
 
 export default ({ data }) => (
   <Layout>
-    <h1>About {data.site.siteMetadata.title}</h1>
+    <h1>About Me</h1>
     <p>
       <span role="img" aria-label="tada">
         🎉
@@ -26,7 +26,7 @@ export default ({ data }) => (
         contact@juliomixco.com
       </a>
     </p>
-    <h3>My Skills</h3>
+    <h2 class="margin-y-32">My Skills</h2>
     <SkillGrid></SkillGrid>
   </Layout>
 )

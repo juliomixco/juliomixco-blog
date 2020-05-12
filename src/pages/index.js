@@ -35,7 +35,7 @@ const BlogIndex = ({ data }) => {
   // `)
   const thumbnail = data.seoImage
   console.log(data, thumbnail)
-  const imageSrc = thumbnail && thumbnail.childImageSharp.fluid.src
+  const imageSrc = thumbnail && thumbnail.childImageSharp.fixed.src
   let origin = ""
   if (typeof window !== "undefined") {
     origin = window.location.origin
@@ -106,8 +106,8 @@ export const query = graphql`
     }
     seoImage: file(relativePath: { eq: "images/profile.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 300, height: 157) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

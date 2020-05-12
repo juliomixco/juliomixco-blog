@@ -1,0 +1,58 @@
+@use "sass:map";
+$base-spacer: 8;
+$spacer: 8px;
+$amount-of-variations: 15;
+$spacer-units: (
+  8: 8,
+);
+
+@for $i from 2 through $amount-of-variations {
+  $current-spacer-key: $i * $base-spacer;
+  $current-spacer: $i * $spacer;
+  $spacer-units: map-merge(
+    $spacer-units,
+    (
+      "#{$current-spacer-key}": $current-spacer,
+    )
+  );
+}
+
+@mixin property-rules($prop, $name, $value) {
+  $sides: left right top bottom;
+  .#{$prop}-#{$name} {
+    #{$prop}: $value;
+  }
+  .#{$prop}-y-#{$name} {
+    #{$prop}-top: $value;
+    #{$prop}-bottom: $value;
+  }
+  .#{$prop}-x-#{$name} {
+    #{$prop}-left: $value;
+    #{$prop}-right: $value;
+  }
+  @each $side in $sides {
+    .#{$prop}-#{$side}-#{$name} {
+      #{$prop}-#{$side}: $value;
+    }
+  }
+}
+/* 
+** margin-right-8
+** margin-left-8
+** margin-x-8
+** margin-y-8
+** padding-right-8
+** padding-left-8
+** padding-x-8
+** padding-y-8
+*/
+@each $name, $value in $spacer-units {
+  $proplist: margin padding;
+  @each $prop in $proplist {
+    @include property-rules($prop, $name, $value);
+    // @media (min-width: $big-screen) {
+    //   $ratio: #{big-units($value)};
+    //   @include property-rules($prop, $name, $ratio);
+    // }
+  }
+}

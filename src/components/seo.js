@@ -27,7 +27,8 @@ function SEO({ description, lang, meta, title, thumbnail }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
+  console.log("*****/*/*/ URL")
+  console.log(thumbnail)
   return (
     <Helmet
       htmlAttributes={{
@@ -58,7 +59,11 @@ function SEO({ description, lang, meta, title, thumbnail }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:image`,
+          content: thumbnail,
         },
         {
           name: `twitter:creator`,
@@ -75,10 +80,6 @@ function SEO({ description, lang, meta, title, thumbnail }) {
         {
           name: `twitter:site`,
           content: site.siteMetadata.twitterTag,
-        },
-        {
-          name: `twitter:image`,
-          content: thumbnail,
         },
       ].concat(meta)}
     />
