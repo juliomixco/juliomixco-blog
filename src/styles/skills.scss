@@ -1,0 +1,99 @@
+// TODO: use variables for colors and shadows
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(184px, 1fr));
+  grid-gap: 24px;
+}
+
+.skill-item {
+  border: solid 1px #cecece;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  animation: 2s pulseend reverse 1, 1.5s pulse 2s 3, 1s pulseend 6.5s 1;
+
+  &:hover {
+    background-color: #f3f3f3;
+    font-weight: bold;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: scale(1.1);
+  }
+}
+
+.skill-bg-hover-redish:hover {
+  background-color: #f5595d59;
+  .skill-name {
+    color: #b52e31;
+  }
+}
+
+.skill-bg-hover-darkblue:hover {
+  background-color: #1d324a;
+  .skill-name {
+    color: #00d8ff;
+  }
+}
+
+.skill-bg-hover-purple:hover {
+  background-color: #e5dbff;
+  .skill-name {
+    color: #764abc;
+  }
+}
+
+.skill-bg-hover-green:hover {
+  background-color: #57ca538f;
+  .skill-name {
+    color: #42893f;
+  }
+}
+
+.skill-bg-hover-lightblue:hover {
+  background-color: #1862de4d;
+  .skill-name {
+    color: #2c375ff5;
+  }
+}
+
+.skill-bg-hover-white:hover {
+  background-color: white;
+  .skill-name {
+    color: #000000;
+  }
+}
+
+.skill-name {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 66, 220, 0.445);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 20px 10px rgba(46, 66, 220, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 66, 220, 0);
+  }
+}
+
+@keyframes pulseend {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 66, 220, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+}

@@ -1,0 +1,34 @@
+@import "colors.scss";
+
+:root {
+  --primary-color: #{$color1};
+  --secondary-color: #{$color2};
+  --background-color: #{$backgroundColor};
+  --heading-color: #{$color3};
+  --header-color: #{$colorHeader};
+}
+html {
+  background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading-color);
+}
+
+.header-nav li a {
+  color: var(--secondary-color);
+}
+
+.page-content {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #b7b1b1;
+  margin: 0 auto;
+  max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.55) 0 8px 16px;
+  @media (min-width: 600px) {
+    max-width: 900px;
+  }
+}

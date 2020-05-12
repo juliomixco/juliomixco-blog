@@ -1,0 +1,28 @@
+deckgo-highlight-code {
+  position: relative;
+}
+
+[language]:after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 94px;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+[language="typescript"]:after {
+  content: "TypeScript";
+  background-color: #0074c1;
+  color: white;
+}
+
+[language="javascript"]:after {
+  content: "JavaScript";
+  background-color: #f7df1e;
+  color: #000000;
+}

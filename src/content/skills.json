@@ -1,5 +1,15 @@
 [
   {
+    "logoUrl": "../images/skills/angular-logo.png",
+    "name": "Angular",
+    "classes": ["skill-bg-hover-redish"]
+  },
+  {
+    "logoUrl": "../images/skills/react-logo.png",
+    "name": "React",
+    "classes": ["skill-bg-hover-darkblue"]
+  },
+  {
     "logoUrl": "../images/skills/csharp-logo.png",
     "name": "C#",
     "classes": ["skill-bg-hover-purple"]
@@ -13,16 +23,6 @@
     "logoUrl": "../images/skills/javascript-logo.png",
     "name": "JavaScript",
     "classes": ["skill-bg-hover-white"]
-  },
-  {
-    "logoUrl": "../images/skills/angular-logo.png",
-    "name": "Angular",
-    "classes": ["skill-bg-hover-redish"]
-  },
-  {
-    "logoUrl": "../images/skills/react-logo.png",
-    "name": "React",
-    "classes": ["skill-bg-hover-darkblue"]
   },
 
   {
