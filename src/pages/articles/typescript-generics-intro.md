@@ -158,7 +158,7 @@ In the example above, we create a generic _Interface_ that takes `T` as a Type P
 As you can see in the code above, I assigned each _const_ a Type. Some of them are aliases, and the other ones are Interfaces composed inline. I've intentionally done that composition, so you can notice it makes no difference the way you assign the type. You always get the same benefits.
 
 **Pro tip**: in Visual Studio Code you can activate [Intellisense](https://code.visualstudio.com/docs/editor/intellisense) (code completion) by placing your cursor inside the empty object and pressing
-<kbd>Ctrl</kbd> + <kbd>Space</kbd>
+<kbd>Ctrl</kbd>+<kbd>Space</kbd>
 
 Wait, what's that? Now they added a paginated endpoint 😲. No problem, you only need to create another _Generic Interface_ to define the shape of the pagination wrapper.
 
