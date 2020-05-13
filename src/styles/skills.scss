@@ -14,7 +14,7 @@ $lightblue-text: #2c375ff5;
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(184px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   grid-gap: 24px;
 }
 
@@ -45,7 +45,6 @@ $lightblue-text: #2c375ff5;
   animation: 1.5s pulse-text 2s 3;
 }
 .skill-image {
-  min-height: 215px;
   display: flex;
   flex-grow: 1;
   align-items: center;
