@@ -1,15 +1,4 @@
 @import "colors.scss";
-body,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Open Sans";
-}
-body {
-  font-size: 16px;
-}
 :root {
   --primary-color: #{$color1};
   --secondary-color: #{$color2};
@@ -17,6 +6,21 @@ body {
   --heading-color: #{$color3};
   --header-color: #{$colorHeader};
 }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Open Sans";
+  margin: 0.3em auto;
+}
+
+body {
+  font-size: 16px;
+}
+
 html {
   background-color: var(--background-color);
 }
@@ -27,6 +31,35 @@ h3 {
   color: var(--heading-color);
 }
 
+h1 {
+  margin: 0 auto;
+  padding: 14px 0 7px;
+  font-weight: 700;
+  min-height: 40px;
+  word-break: break-word;
+  line-height: 1.28em;
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+  line-height: 1.14em;
+  padding-bottom: 0;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.32em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #209be2;
+  &:visited {
+    color: #3916f7;
+  }
+}
 .header-nav li a {
   color: var(--secondary-color);
 }
@@ -57,4 +90,11 @@ kbd {
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(12, 13, 14, 0.15), inset 0 1px 0 0 #fff;
   white-space: nowrap;
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
 }

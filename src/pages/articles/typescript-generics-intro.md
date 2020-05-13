@@ -244,8 +244,11 @@ export class MyClass<T, K, ValType> extends MyBaseClass<ValType> {
 
   <figcaption>Looking Good!</figcaption>
 
-**Now go and recover your type checks!!**
+**Now go and recover your type checks!!**<br>
+
+## Conclusion
+
 In this article, I talked about the many benefits of using generics and some of the problems they solve. I have seen many new developers struggle with _any_ and losing their type checks. After reading this article, I hope you go to your code, remove most of the _any_ you've used, and refactor it to be generic.
 
-Thanks for reading,
+Thanks for reading,<br>
 Julio Mixco
