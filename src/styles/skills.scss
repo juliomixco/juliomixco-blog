@@ -1,6 +1,6 @@
 // TODO: use variables for colors and shadows
 $default-text-color: black;
-$default-background-color: #f3f3f3;
+$default-background-color: white;
 $redish-background: #f5595d59;
 $redish-text: #b52e31;
 $darkblue-background: #1d324a;
@@ -9,8 +9,9 @@ $purple-background: #e5dbff;
 $purple-text: #764abc;
 $green-background: #57ca538f;
 $green-text: #42893f;
-$lightblue-background: #1862de4d;
-$lightblue-text: #2c375ff5;
+$lightblue-background: #659af34f;
+$lightblue-text: #0074c1;
+$default-border-highlight: #919daa;
 
 .skill-grid {
   display: grid;
@@ -22,8 +23,10 @@ $lightblue-text: #2c375ff5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid 1px transparent;
-  border-radius: 4px;
+  border: solid 0px transparent;
+  border-top: solid 4px var(--border-highlight-color, $default-border-highlight);
+  border-radius: 8px 8px 4px 4px;
+
   padding: 16px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -31,6 +34,7 @@ $lightblue-text: #2c375ff5;
 
   &:hover {
     background-color: var(--background-color, $default-background-color);
+    background-image: var(--background-image);
     font-weight: bold;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transform: scale(1.1);
@@ -54,31 +58,51 @@ $lightblue-text: #2c375ff5;
 .skill-bg-hover-redish {
   --background-color: #{$redish-background};
   --text-color: #{$redish-text};
+  --border-highlight-color: #{$redish-text};
 }
 
 .skill-bg-hover-darkblue {
   --background-color: #{$darkblue-background};
   --text-color: #{$react-text};
+  --border-highlight-color: #{$react-text};
 }
 
 .skill-bg-hover-purple {
   --background-color: #{$purple-background};
   --text-color: #{$purple-text};
+  --border-highlight-color: #{$purple-text};
 }
 
 .skill-bg-hover-green {
   --background-color: #{$green-background};
   --text-color: #{$green-text};
+  --border-highlight-color: #{$green-text};
 }
 
 .skill-bg-hover-lightblue {
   --background-color: #{$lightblue-background};
   --text-color: #{$lightblue-text};
+  --border-highlight-color: #{$lightblue-text};
 }
 
 .skill-bg-hover-white {
   --background-color: white;
-  --text-color: black;
+  --text-color: #5d5d5d;
+  --border-highlight-color: #{$default-border-highlight};
+}
+.skill-bg-hover-orange {
+  position: relative;
+
+  --background-color: white;
+  --background-image: linear-gradient(
+    145deg,
+    rgba(244, 186, 86, 0.5) 0%,
+    rgba(245, 205, 58, 0.33) 47%,
+    rgba(0, 255, 179, 0.5) 100%
+  );
+  --text-color: #e09647;
+  --border-highlight-color: #da714b;
+  border-top-width: 0px;
 }
 
 .skill-name {
@@ -90,6 +114,7 @@ $lightblue-text: #2c375ff5;
 @keyframes pulse {
   0% {
     background-color: var($default-background-color);
+    background-image: var(--background-image);
 
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(46, 66, 220, 0.445);
@@ -97,6 +122,7 @@ $lightblue-text: #2c375ff5;
 
   70% {
     background-color: var(--background-color, $default-background-color);
+    background-image: var(--background-image);
     transform: scale(1);
     box-shadow: 0 0 20px 10px rgba(46, 66, 220, 0);
   }

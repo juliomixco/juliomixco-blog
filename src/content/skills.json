@@ -47,7 +47,8 @@
   },
   {
     "logoUrl": "../images/skills/mysql-logo.png",
-    "name": "MySQL"
+    "name": "MySQL",
+    "classes": ["skill-bg-hover-white"]
   },
   {
     "logoUrl": "../images/skills/sqlserver-logo.png",
@@ -62,6 +63,6 @@
   {
     "logoUrl": "../images/skills/d3-logo.png",
     "name": "D3",
-    "classes": ["skill-bg-hover-white"]
+    "classes": ["skill-bg-hover-orange"]
   }
 ]
