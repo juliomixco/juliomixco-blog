@@ -30,7 +30,7 @@ self.__precacheManifest = [
     "url": "webpack-runtime-00e3d843b9f18a4fab33.js"
   },
   {
-    "url": "styles.31f74520096a8dd38f7d.css"
+    "url": "styles.68cc3abbc3ef981198b6.css"
   },
   {
     "url": "styles-adf20a089d5edc383fbd.js"
@@ -43,7 +43,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "36c4aa8f32ca2139534ea8c93d19a806"
+    "revision": "a89ba6f71ad0eee54889ac5a7b17b21b"
   },
   {
     "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2",
@@ -70,6 +70,10 @@ self.__precacheManifest = [
     "revision": "6725c3fb1f3abd7ebdcb2d244758f706"
   },
   {
+    "url": "google-fonts/s/pressstart2p/v8/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2",
+    "revision": "18682aa5b1ee731888e193ab98bffe2b"
+  },
+  {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-0eefb2092d535e2a0e88.js"
   },
   {
@@ -78,7 +82,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c55273d6fc64e456546e6dc6670b7339"
+    "revision": "d5c4ba24a2ee0a1730e4abdfb61ca7f2"
   },
   {
     "url": "manifest.webmanifest",
