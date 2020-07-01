@@ -26,6 +26,7 @@ export default ({ children }) => {
         css={css`
           padding: ${rhythm(2)};
           padding-top: ${rhythm(1.5)};
+          margin-top: 96px;
         `}
       >
         {children}

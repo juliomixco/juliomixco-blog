@@ -46,6 +46,7 @@ const BlogIndex = ({ data }) => {
       <SEO title="Index" thumbnail={image} />
       <div>
         <h1
+          className="margin-bottom-32"
           css={css`
             display: inline-block;
             border-bottom: 1px solid;
@@ -55,7 +56,7 @@ const BlogIndex = ({ data }) => {
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
+          <div key={node.id} className="margin-top-32">
             <Link
               to={node.fields.slug}
               css={css`
@@ -68,16 +69,18 @@ const BlogIndex = ({ data }) => {
                   margin-bottom: ${rhythm(1 / 4)};
                 `}
               >
-                {node.frontmatter.title}{" "}
+                {node.frontmatter.title} <br></br>
+              </h3>
+              <div className="margin-top-8">
                 <span
                   css={css`
                     color: #555;
                   `}
                 >
-                  — {node.frontmatter.date}
+                  {node.frontmatter.date}
                 </span>
-              </h3>
-              <p>{node.excerpt}</p>
+              </div>
+              <p className="margin-top-16">{node.excerpt}</p>
             </Link>
           </div>
         ))}

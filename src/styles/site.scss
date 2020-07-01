@@ -19,6 +19,7 @@ h5 {
 
 body {
   font-size: 16px;
+  margin: 0;
 }
 
 html {
@@ -60,8 +61,28 @@ a {
     color: #3916f7;
   }
 }
+
+.site-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  width: 100%;
+  background: var(--header-color);
+  margin-bottom: 1.45rem;
+  top: 0;
+  z-index: 1;
+  backdrop-filter: blur(15px);
+}
+
 .header-nav li a {
-  color: var(--secondary-color);
+  color: #f7f7f7;
+  text-decoration: none;
+
+  &:hover {
+    color: #38d3bd;
+  }
 }
 
 .page-content {
