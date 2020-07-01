@@ -9,21 +9,13 @@ const ListLink = props => (
 )
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header className="site-header">
     <div
       style={{
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h2 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -33,12 +25,20 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+      </h2>
     </div>
-    <ul style={{ listStyle: `none`, display: "flex", margin: 0 }}>
+    <ul
+      className="header-nav"
+      style={{
+        listStyle: `none`,
+        display: "flex",
+        flexWrap: "wrap",
+        margin: 0,
+      }}
+    >
       <ListLink to="/">Home</ListLink>
       <ListLink to="/about/">About</ListLink>
-      <ListLink to="/contact/">Contact</ListLink>
+      {/* <ListLink to="/contact/">Contact</ListLink> */}
     </ul>
   </header>
 )

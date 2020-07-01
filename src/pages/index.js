@@ -35,7 +35,7 @@ const BlogIndex = ({ data }) => {
   // `)
   const thumbnail = data.seoImage
   console.log(data, thumbnail)
-  const imageSrc = thumbnail && thumbnail.childImageSharp.fluid.src
+  const imageSrc = thumbnail && thumbnail.childImageSharp.fixed.src
   let origin = ""
   if (typeof window !== "undefined") {
     origin = window.location.origin
@@ -46,6 +46,7 @@ const BlogIndex = ({ data }) => {
       <SEO title="Index" thumbnail={image} />
       <div>
         <h1
+          className="margin-bottom-32"
           css={css`
             display: inline-block;
             border-bottom: 1px solid;
@@ -55,7 +56,7 @@ const BlogIndex = ({ data }) => {
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
+          <div key={node.id} className="margin-top-32">
             <Link
               to={node.fields.slug}
               css={css`
@@ -68,16 +69,18 @@ const BlogIndex = ({ data }) => {
                   margin-bottom: ${rhythm(1 / 4)};
                 `}
               >
-                {node.frontmatter.title}{" "}
+                {node.frontmatter.title} <br></br>
+              </h3>
+              <div className="margin-top-8">
                 <span
                   css={css`
                     color: #555;
                   `}
                 >
-                  — {node.frontmatter.date}
+                  {node.frontmatter.date}
                 </span>
-              </h3>
-              <p>{node.excerpt}</p>
+              </div>
+              <p className="margin-top-16">{node.excerpt}</p>
             </Link>
           </div>
         ))}
@@ -106,8 +109,8 @@ export const query = graphql`
     }
     seoImage: file(relativePath: { eq: "images/profile.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 300, height: 157) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

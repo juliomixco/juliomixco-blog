@@ -158,7 +158,7 @@ In the example above, we create a generic _Interface_ that takes `T` as a Type P
 As you can see in the code above, I assigned each _const_ a Type. Some of them are aliases, and the other ones are Interfaces composed inline. I've intentionally done that composition, so you can notice it makes no difference the way you assign the type. You always get the same benefits.
 
 **Pro tip**: in Visual Studio Code you can activate [Intellisense](https://code.visualstudio.com/docs/editor/intellisense) (code completion) by placing your cursor inside the empty object and pressing
-<kbd>Ctrl</kbd> + <kbd>Space</kbd>
+<kbd>Ctrl</kbd>+<kbd>Space</kbd>
 
 Wait, what's that? Now they added a paginated endpoint 😲. No problem, you only need to create another _Generic Interface_ to define the shape of the pagination wrapper.
 
@@ -244,8 +244,11 @@ export class MyClass<T, K, ValType> extends MyBaseClass<ValType> {
 
   <figcaption>Looking Good!</figcaption>
 
-**Now go and recover your type checks!!**
+**Now go and recover your type checks!!**<br>
+
+## Conclusion
+
 In this article, I talked about the many benefits of using generics and some of the problems they solve. I have seen many new developers struggle with _any_ and losing their type checks. After reading this article, I hope you go to your code, remove most of the _any_ you've used, and refactor it to be generic.
 
-Thanks for reading,
+Thanks for reading,<br>
 Julio Mixco
