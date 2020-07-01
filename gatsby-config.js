@@ -3,7 +3,7 @@ module.exports = {
   // pathPrefix: "/juliomixco-blog",
   siteMetadata: {
     siteUrl: "https://juliomixco.com",
-    title: `Julio Mixco - Blog | WIP 🚧🏗🦺🛠`,
+    title: `Julio Mixco - Blog 🚧`,
     description: `🎉 Welcome to my Blog 👋.  My name is Julio Mixco I'm a Software Engineering Professional with 5+ years of experience in web development I have worked as both backend and frontend developer with technologies like TypeScript, Javascript, C#, Angular, React, NodeJS and .Net `,
     author: `@JULIOMIXCO`,
     twitterTag: "@JMixcoG",
